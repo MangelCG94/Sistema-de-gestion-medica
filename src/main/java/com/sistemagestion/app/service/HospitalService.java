@@ -21,7 +21,7 @@ public class HospitalService {
 
     public Hospital findById(Long id) {
         return repository.findById(id).orElseThrow(() ->
-                new ResourceNotFoundException("El hospital (id: " + id + ") no fue encontrado", 5));
+                new ResourceNotFoundException("El hospital (id: " + id + ") no fue encontrado", 6));
     }
 
     public Hospital save(Hospital hospital) {

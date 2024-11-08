@@ -27,7 +27,7 @@ public class AreaService {
 
     public Area findById(Long id) {
         return repository.findById(id).orElseThrow(() ->
-                new ResourceNotFoundException("El área (id: " + id + ") no fue encontrado", 5));
+                new ResourceNotFoundException("El área (id: " + id + ") no fue encontrado", 7));
     }
 
     public Area save(Area area) {
