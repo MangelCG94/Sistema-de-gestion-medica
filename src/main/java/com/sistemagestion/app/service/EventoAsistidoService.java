@@ -21,7 +21,7 @@ public class EventoAsistidoService {
 
     public EventoAsistido findById(Long id) {
         return repository.findById(id).orElseThrow(() ->
-                new ResourceNotFoundException("El evento asistido (id: " + id + ") no fue encontrado", 5));
+                new ResourceNotFoundException("El evento asistido (id: " + id + ") no fue encontrado", 11));
     }
 
     public EventoAsistido save(EventoAsistido eventoAsistido) {

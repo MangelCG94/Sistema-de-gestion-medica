@@ -21,7 +21,7 @@ public class InformeService {
 
     public Informe findById(Long id) {
         return repository.findById(id).orElseThrow(() ->
-                new ResourceNotFoundException("El paciente (id: " + id + ") no fue encontrado", 5));
+                new ResourceNotFoundException("El informe (id: " + id + ") no fue encontrado", 4));
     }
 
     public Informe save(Informe informe) {

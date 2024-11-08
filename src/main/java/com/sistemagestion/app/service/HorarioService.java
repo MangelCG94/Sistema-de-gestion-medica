@@ -21,7 +21,7 @@ public class HorarioService {
 
     public Horario findById(Long id) {
         return repository.findById(id).orElseThrow(() ->
-                new ResourceNotFoundException("El horario (id: " + id + ") no fue encontrado", 5));
+                new ResourceNotFoundException("El horario (id: " + id + ") no fue encontrado", 8));
     }
 
     public Horario save(Horario horario) {

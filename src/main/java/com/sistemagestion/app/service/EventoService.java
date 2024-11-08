@@ -27,7 +27,7 @@ public class EventoService {
 
     public Evento findById(Long id) {
         return repository.findById(id).orElseThrow(() ->
-                new ResourceNotFoundException("El evento (id: " + id + ") no fue encontrado", 5));
+                new ResourceNotFoundException("El evento (id: " + id + ") no fue encontrado", 10));
     }
 
     public Evento save(Evento evento) {

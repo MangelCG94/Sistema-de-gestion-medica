@@ -21,7 +21,7 @@ public class CitaService {
 
     public Cita findById(Long id) {
         return repository.findById(id).orElseThrow(() ->
-                new ResourceNotFoundException("La cita (id: " + id + ") no fue encontrada", 5));
+                new ResourceNotFoundException("La cita (id: " + id + ") no fue encontrada", 9));
     }
 
     public Cita save(Cita cita) {
