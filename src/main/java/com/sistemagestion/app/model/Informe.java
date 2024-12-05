@@ -2,8 +2,9 @@ package com.sistemagestion.app.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.LastModifiedBy;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 import java.time.Instant;
 
@@ -13,8 +14,9 @@ import java.time.Instant;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@EnableJpaAuditing(auditorAwareRef = "auditorProvider")
 @Table(name = "informes")
-public class Informe { //todo: clase que guarde todos los cambios
+public class Informe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -33,8 +35,8 @@ public class Informe { //todo: clase que guarde todos los cambios
     private String descripcion;
     private String imagen;
 
-    @CreatedDate
-    private Instant createdDate;
+    @CreatedBy
+    private Instant createdBy;
 
     @LastModifiedBy
     private Instant lastModifiedBy;

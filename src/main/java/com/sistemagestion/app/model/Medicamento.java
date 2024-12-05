@@ -2,7 +2,7 @@ package com.sistemagestion.app.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.LastModifiedBy;
 
 import java.time.Instant;
@@ -31,8 +31,8 @@ public class Medicamento {
     private Boolean desaconsejado;
     private Boolean peligroso;
 
-    @CreatedDate
-    private Instant createdDate;
+    @CreatedBy
+    private Instant createdBy;
 
     @LastModifiedBy
     private Instant lastModifiedBy;
